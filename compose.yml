@@ -9,6 +9,12 @@ services:
       replicas: 2
     networks:
       - mynetwork
+  vpromq01:
+    image: rabbitmq:3-management
+    deploy:
+      replicas: 1
+    networks:
+      - mynetwork
 
   application:
     image: nagaraju444/appimage:v1
